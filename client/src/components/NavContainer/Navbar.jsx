@@ -70,7 +70,7 @@ const Navbar = () => {
             style={{ color: "white" }}
             onClick={() => scrollToSections("services")}
           >
-            <span>Waitlist Features</span>
+            <span>Services</span>
           </NavLink>
         </li>
         {/* ------------team navigation------ */}
@@ -138,7 +138,7 @@ const Navbar = () => {
                 onClick={() => scrollToSections("services")}
               >
                 <span onClick={() => setToggled(!toggled)} className="icon">
-                  Waitlist Features
+                  Services
                 </span>
               </NavLink>
             </li>
