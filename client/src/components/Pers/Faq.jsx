@@ -29,7 +29,7 @@ export default function Faq() {
               fontWeight: "500",
             }}
           >
-            How do I earn from Tutorium?
+            How do I earn on Tutorium?
           </AccordionSummary>
           <AccordionDetails
             sx={{
