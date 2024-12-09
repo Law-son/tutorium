@@ -38,7 +38,7 @@ export default function Faq() {
           >
             Join Tutorium as a tutor and upload useful tutorial services and
             videos. Choose your own prices and get paid anytime a student books
-            your services or buys you videos.
+            your services or buys your videos.
           </AccordionDetails>
         </Accordion>
         <Accordion
