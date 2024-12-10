@@ -8,6 +8,7 @@ import Perspective from "./components/Pers/Perspective";
 import NewsLetter from "./components/Pers/NewsLetter";
 import Faq from "./components/Pers/Faq";
 import Footer from "./components/Pers/Footer";
+import howToRoutes from "./howTos/appHowToRoutes";
 
 const App = () => {
   const Layout = ({ children }) => {
@@ -24,7 +25,6 @@ const App = () => {
     );
   };
 
-  // set up router
   const router = createBrowserRouter([
     {
       path: "*",
@@ -33,7 +33,6 @@ const App = () => {
     {
       path: "/",
       element: <Layout children={<Home />} />,
-      // error element
       errorElement: ({ error }) => (
         <div>
           <h2>An error occurred: {error.message}</h2>
@@ -43,6 +42,7 @@ const App = () => {
         </div>
       ),
     },
+    ...howToRoutes, // Spread the imported routes here
   ]);
 
   return (

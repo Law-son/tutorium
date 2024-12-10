@@ -123,6 +123,7 @@ ul.css-ewdv3l {
 .list-dsk {
   display: flex;
   gap: 1.5rem;
+  list-style: none;
 
   & span {
     color: #000;

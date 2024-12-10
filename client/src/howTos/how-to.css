@@ -1,0 +1,49 @@
+/* Container styling */
+.how-to-container {
+  padding: 20px;
+  background-color: #f9fafb; /* Light gray background */
+  height: 100vh;
+}
+
+/* Heading styling */
+.how-to-heading {
+  font-size: 1.5rem; /* Equivalent to text-2xl */
+  font-weight: bold;
+  color: #1f2937; /* Dark gray color */
+  margin-bottom: 1rem;
+}
+
+/* Paragraph styling */
+.how-to-text {
+  color: #4b5563; /* Neutral gray text color */
+  line-height: 1.6;
+}
+
+/* Ordered list styling */
+.how-to-list {
+  list-style-type: decimal;
+  padding-left: 1.5rem; /* Space for the numbers */
+  margin-top: 1rem;
+  list-style: decimal !important;
+}
+
+.how-to-list-item {
+  padding: 5px;
+  margin-bottom: 0.5rem;
+  font-weight: 500; /* Semi-bold for emphasis */
+}
+
+/* Link styling */
+.how-to-link {
+  color: #2563eb; /* Blue link color */
+  text-decoration: none;
+}
+
+.how-to-link:hover {
+  text-decoration: underline;
+}
+
+.sublist-roman {
+  list-style-type: lower-roman;
+  padding-left: 1.5rem; /* Indent to match parent list */
+}
