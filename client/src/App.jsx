@@ -9,6 +9,8 @@ import NewsLetter from "./components/Pers/NewsLetter";
 import Faq from "./components/Pers/Faq";
 import Footer from "./components/Pers/Footer";
 import howToRoutes from "./howTos/appHowToRoutes";
+import PrivacyPolicy from "./components/PrivacyPolicy";
+import TermsCondition from "./components/TermsCondition";
 
 const App = () => {
   const Layout = ({ children }) => {
@@ -42,8 +44,17 @@ const App = () => {
         </div>
       ),
     },
+    {
+      path: "/privacy-policy",
+      element: <PrivacyPolicy />,
+    },
+    {
+      path: "/terms-and-conditions",
+      element: <TermsCondition />,
+    },
     ...howToRoutes, // Spread the imported routes here
   ]);
+
 
   return (
     <>
