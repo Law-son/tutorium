@@ -1,26 +1,35 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
 import AnimatedText from "./AnimatedText";
 import "./MessagePage.css";
 
 const MessagePage = () => {
-    const message = `Dear Tutorium Admin,
-  
-A tutor just created a new tutorial service. Review it for approval. Below are the details:
+    const { messageID } = useParams(); 
+    const [message, setMessage] = useState("Fetching message...");
 
-Tutorial Title: 
-Category: 
-Cost: 
-Description: 
-School: 
-Date Created: 
-Name: 
-Email:
-Number: 
+    useEffect(() => {
+        const fetchMessage = async () => {
+            if (!messageID) return; // Ensure messageID exists
 
-Best regards,  
-The Tutorium Team  
+            try {
+                const response = await fetch(
+                    `https://tutorium-tutors-backend.onrender.com/message/fetchMessage?messageID=${messageID}`
+                );
+                const data = await response.json();
 
-[Customer service email: tutorium.customer@gmail.com. Email us here.]`;
+                if (response.ok && data.message) {
+                    setMessage(data.message);
+                } else {
+                    setMessage("Message not found.");
+                }
+            } catch (error) {
+                console.error("Error fetching message:", error);
+                setMessage("Failed to fetch message.");
+            }
+        };
+
+        fetchMessage();
+    }, [messageID]); 
 
     return (
         <main className="message-container">

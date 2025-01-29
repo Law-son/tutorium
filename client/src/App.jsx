@@ -54,7 +54,7 @@ const App = () => {
       element: <TermsCondition />,
     },
     {
-      path: "/message",
+      path: "/message/:messageID",
       element: <MessagePage />,
     },
     ...howToRoutes, // Spread the imported routes here
