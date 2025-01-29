@@ -1,0 +1,53 @@
+/* General Page Styling */
+.message-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f3f4f6;
+    padding: 16px;
+}
+
+/* Main Message Box */
+.message-box {
+    max-width: 640px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 24px;
+    overflow: hidden;
+}
+
+/* Heading */
+.message-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 16px;
+    color: #2563eb;
+}
+
+/* Message Content */
+.message-content {
+    background-color: #ebf8ff;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    max-width: 100%;  /* Ensure it does not exceed the parent */
+    word-break: break-word; /* Break long words */
+    white-space: normal; /* Allow normal wrapping */
+}
+
+/* Fixing the <pre> Tag */
+.message-content pre {
+    white-space: pre-wrap; /* Ensures text wraps properly */
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    max-width: 100%; /* Prevents it from exceeding the container */
+    overflow-x: auto; /* Adds horizontal scrolling only if necessary */
+    display: block; /* Ensures it behaves correctly */
+    font-size: 1rem;
+    line-height: 1.5;
+}

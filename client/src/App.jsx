@@ -11,6 +11,7 @@ import Footer from "./components/Pers/Footer";
 import howToRoutes from "./howTos/appHowToRoutes";
 import PrivacyPolicy from "./components/PrivacyPolicy";
 import TermsCondition from "./components/TermsCondition";
+import MessagePage from "./pages/MessagePage";
 
 const App = () => {
   const Layout = ({ children }) => {
@@ -51,6 +52,10 @@ const App = () => {
     {
       path: "/terms-and-conditions",
       element: <TermsCondition />,
+    },
+    {
+      path: "/message",
+      element: <MessagePage />,
     },
     ...howToRoutes, // Spread the imported routes here
   ]);
