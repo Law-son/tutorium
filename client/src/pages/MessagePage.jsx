@@ -17,12 +17,9 @@ const MessagePage = () => {
                     {
                         method: "GET",  
                         mode: "cors",   
-                        headers: {
-                            "Content-Type": "application/json",
-                        },
                     }
                 );
-                const data = await response.json();
+                const data = await response.text();
 
                 if (response.ok && data.message) {
                     setMessage(data.message);
