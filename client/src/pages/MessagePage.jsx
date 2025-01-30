@@ -4,7 +4,7 @@ import AnimatedText from "./AnimatedText";
 import "./MessagePage.css";
 
 const MessagePage = () => {
-    const { messageID } = useParams(); 
+    const { messageID } = useParams();
     const [message, setMessage] = useState("Fetching message...");
 
     useEffect(() => {
@@ -15,9 +15,11 @@ const MessagePage = () => {
                 const response = await fetch(
                     `https://tutorium-tutors-backend.onrender.com/message/fetchMessage?messageID=${messageID}`,
                     {
+                        method: "GET",  
+                        mode: "cors",   
                         headers: {
                             "Content-Type": "application/json",
-                        }
+                        },
                     }
                 );
                 const data = await response.json();
@@ -34,7 +36,7 @@ const MessagePage = () => {
         };
 
         fetchMessage();
-    }, [messageID]); 
+    }, [messageID]);
 
     return (
         <main className="message-container">
