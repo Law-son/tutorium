@@ -13,7 +13,12 @@ const MessagePage = () => {
 
             try {
                 const response = await fetch(
-                    `https://tutorium-tutors-backend.onrender.com/message/fetchMessage?messageID=${messageID}`
+                    `https://tutorium-tutors-backend.onrender.com/message/fetchMessage?messageID=${messageID}`,
+                    {
+                        headers: {
+                            "Content-Type": "application/json",
+                        }
+                    }
                 );
                 const data = await response.json();
 
