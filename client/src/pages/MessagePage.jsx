@@ -16,10 +16,10 @@ const MessagePage = () => {
                     `https://tutorium-tutors-backend.onrender.com/message/fetchMessage?messageID=${messageID}`,
                     {
                         method: "GET",  
-                        mode: "cors",   
                     }
                 );
                 const data = await response.text();
+                console.log(data);
 
                 if (response.ok && data.message) {
                     setMessage(data.message);
