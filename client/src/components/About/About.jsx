@@ -102,7 +102,7 @@ const About = () => {
               </p>
               <p>
                 We know the exact person to help you with that stressful course.
-                And they're on Tutorium
+                And they're on Tutorium.
               </p>
             </div>
             <div className="sub_feature">
@@ -114,7 +114,7 @@ const About = () => {
               </p>
               <p>
                 Don't leave school with just a certificate, let a Tutorium tutor
-                teach you a useful skill
+                teach you a useful skill.
               </p>
             </div>
           </div>
